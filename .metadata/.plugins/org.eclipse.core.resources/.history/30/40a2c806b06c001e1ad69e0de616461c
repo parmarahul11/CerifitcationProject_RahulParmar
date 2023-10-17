@@ -1,0 +1,42 @@
+package utility;
+
+import java.io.IOException;
+
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFShapeGroup;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class ExcelUtility {
+
+	public void excelReader() throws IOException
+	{
+	
+	}
+	
+	 public static void main(String []args) throws IOException {
+			XSSFWorkbook workbook = new XSSFWorkbook("Testdata/Book1.xlsx");
+			XSSFSheet sheet = workbook.getSheet("Sheet1");
+			XSSFRow row = sheet.getRow(1);
+			XSSFCell cell = row.getCell(0);
+	//		String username = cell.getStringCellValue();
+			
+		//	XSSFCell cell1 = row.getCell(1);
+			//String password = cell1.getStringCellValue().trim();
+		//	System.out.println("Usename : " + username );
+		//	System.out.println("Password : " + password );
+			
+			
+			int noOfRows = sheet.getLastRowNum();
+			System.out.println("Number Of Rows : " + noOfRows );
+			for(int i = 0; i<=noOfRows; i++)
+			{
+				String userName = sheet.getRow(i).getCell(0).getStringCellValue();
+				String passWord = sheet.getRow(i).getCell(1).getStringCellValue();
+					System.out.println("Usename : " + userName );
+					System.out.println("Password : " + passWord );
+			}
+			workbook.close();
+	}
+}

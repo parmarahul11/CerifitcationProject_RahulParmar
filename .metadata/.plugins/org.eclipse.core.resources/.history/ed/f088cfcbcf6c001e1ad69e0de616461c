@@ -1,0 +1,15 @@
+package Pages;
+
+import java.awt.AWTException;
+import java.awt.Robot;
+
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.PageFactory;
+
+public class LoginPage {
+	public LoginPage(RemoteWebDriver driver) {
+		PageFactory.initElements(driver, this);
+	
+	}
+	
+}

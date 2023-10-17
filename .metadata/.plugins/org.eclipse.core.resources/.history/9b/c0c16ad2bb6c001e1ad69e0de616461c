@@ -1,0 +1,21 @@
+package EdurekaProject.EdurekaCertificationProject;
+
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.annotations.Test;
+
+import Pages.HomePage;
+import utility.BaseURL;
+import utility.WebdriverLaunch;
+
+public class HomePageTests {
+	@Test
+	public void signIn()
+	{
+		RemoteWebDriver driver = (RemoteWebDriver) WebdriverLaunch.chromeDriver();
+		driver.get(BaseURL.baseURL);
+		HomePage loginpage = new HomePage(driver);
+		loginpage.hompageSignin("Admin", "Admin123");
+		driver.quit();
+	}
+
+}

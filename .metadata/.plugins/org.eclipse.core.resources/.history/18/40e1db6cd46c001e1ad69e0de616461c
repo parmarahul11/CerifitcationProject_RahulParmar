@@ -1,0 +1,29 @@
+package EdurekaProject.EdurekaCertificationProject;
+
+import java.awt.AWTException;
+import java.io.IOException;
+
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.annotations.Test;
+
+import Pages.HomePage;
+import utility.BaseURL;
+import utility.ExcelPath;
+import utility.ExcelUtility;
+import utility.WebdriverLaunch;
+
+public class Login_Tests {
+	RemoteWebDriver driver;
+	@Test
+	public void signIn(String username, String password) throws AWTException, IOException
+	{
+		 driver = WebdriverLaunch.getDriver("chrome");
+		driver.get(BaseURL.baseURL);
+		HomePage loginpage = new HomePage(driver);
+		loginpage.hompageSignin();
+		ExcelUtility.excelReader(ExcelPath.excelPathLogin, ExcelPath.loginSheet);
+		
+		//driver.quit();
+	}
+
+}

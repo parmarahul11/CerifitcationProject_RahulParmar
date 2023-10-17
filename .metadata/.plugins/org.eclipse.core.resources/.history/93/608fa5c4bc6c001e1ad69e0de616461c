@@ -1,0 +1,39 @@
+package utility;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.safari.SafariDriver;
+
+public class WebdriverLaunch {
+	public static WebDriver driver;
+	public static WebDriver chromeDriver() {
+	//	options =new ChromeOptions();
+	//	 options.addArguments("--incognito");
+		 driver = new ChromeDriver();
+
+		return driver;
+	}
+	public static WebDriver ieDriver() {
+	//	options =new ChromeOptions();
+	//	 options.addArguments("--incognito");
+		 driver = new InternetExplorerDriver();
+
+		return driver;
+	}
+	public static WebDriver fireFoxDriver() {
+	//	options =new ChromeOptions();
+	//	 options.addArguments("--incognito");
+		 driver = new FirefoxDriver();
+
+		return driver;
+	}
+	public static WebDriver safariDriver() {
+	//	options =new ChromeOptions();
+	//	 options.addArguments("--incognito");
+		 driver = new SafariDriver();
+
+		return driver;
+	}
+}

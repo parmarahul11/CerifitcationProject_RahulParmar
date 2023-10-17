@@ -1,0 +1,38 @@
+package utility;
+
+import java.time.Duration;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.safari.SafariDriver;
+
+public class WebdriverLaunch {
+	public static RemoteWebDriver driver;
+
+	public static RemoteWebDriver getDriver(String browserName) {
+		if (browserName.equalsIgnoreCase("")) {
+			driver = new ChromeDriver();
+		} else if (browserName.equalsIgnoreCase("chrome")) {
+			driver = new ChromeDriver();
+		} else if (browserName.equalsIgnoreCase("edge")) {
+//			options =new ChromeOptions();
+			// options.addArguments("--incognito");
+			driver = new EdgeDriver();
+		} else if (browserName.equalsIgnoreCase("firefox")) {
+			driver = new FirefoxDriver();
+		} else if (browserName.equalsIgnoreCase("safari")) {
+			driver = new SafariDriver();
+		} else {
+			driver = new ChromeDriver();
+		}
+		driver.manage().window().maximize();
+
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
+		return driver;
+	}
+}

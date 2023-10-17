@@ -1,0 +1,11 @@
+2023-10-17 17:46:02,407 INFO  - *****************************************************
+2023-10-17 17:46:02,408 INFO  - *************** Login_Test *******************
+2023-10-17 17:46:02,408 INFO  - *****************************************************
+2023-10-17 17:46:11,699 INFO  - Website URL : https://www.amazon.in/
+2023-10-17 17:46:15,179 INFO  - User on Sign In Page
+2023-10-17 17:46:25,182 INFO  - Entering Username : parmarahu11@gmail.com
+2023-10-17 17:46:28,186 INFO  - Clicking on Continue Button
+2023-10-17 17:46:28,678 INFO  - Entering Password : @parmar2023
+2023-10-17 17:46:41,869 INFO  - Clicking on Submit button
+2023-10-17 17:46:42,601 INFO  -  XXXXXXXXXX  END Login_Test XXXXXXXXXX
+2023-10-17 17:46:42,602 INFO  - ------------------------X--------------------------

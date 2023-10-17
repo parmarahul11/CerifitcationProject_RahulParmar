@@ -1,0 +1,5 @@
+package utility;
+
+public class ExcelPath {
+public static final excelPath="Testdata/Book1.xlsx"; 
+}

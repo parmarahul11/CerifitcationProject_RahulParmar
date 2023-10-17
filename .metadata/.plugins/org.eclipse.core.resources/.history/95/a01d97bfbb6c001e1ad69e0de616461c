@@ -1,0 +1,10 @@
+package EdurekaProject.EdurekaCertificationProject;
+
+public class HomePageTests {
+	@Test
+	public void signIn()
+	{
+		
+	}
+
+}

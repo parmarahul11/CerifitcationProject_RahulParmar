@@ -1,0 +1,28 @@
+package utility;
+
+import org.openqa.selenium.WebDriver;
+
+
+
+public class BaseURL {
+	public static String baseURL="https://www.amazon.in/";
+	
+	
+/*	public static WebDriver baseUrl(String selectDriver)
+	{
+		if(selectDriver.equals("chrome"))
+		{
+		driver =WebdriverLaunch.chromeDriver();
+		
+		}else if(selectDriver.equals("ie")) {
+			driver =WebdriverLaunch.ieDriver();
+		}
+		else if(selectDriver.equals("firefox")) {
+			driver =WebdriverLaunch.fireFoxDriver();
+		}else if(selectDriver.equals("safari")) {
+			driver =WebdriverLaunch.safariDriver();
+		}
+		driver.get(baseURL);
+		return driver;
+	}*/
+}

@@ -1,0 +1,24 @@
+package EdurekaProject.EdurekaCertificationProject;
+
+import java.awt.AWTException;
+
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.annotations.Test;
+
+import Pages.HomePage;
+import utility.BaseURL;
+import utility.WebdriverLaunch;
+
+public class HomePageTests {
+	RemoteWebDriver driver;
+	@Test
+	public void signIn(String username, String password) throws AWTException
+	{
+		 driver = WebdriverLaunch.getDriver("chrome");
+		driver.get(BaseURL.baseURL);
+		HomePage loginpage = new HomePage(driver);
+		loginpage.hompageSignin();
+		//driver.quit();
+	}
+
+}

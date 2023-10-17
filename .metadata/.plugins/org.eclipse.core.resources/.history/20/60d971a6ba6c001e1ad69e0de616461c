@@ -1,0 +1,41 @@
+package Pages;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class HomePage {
+	
+	
+	public HomePage(RemoteWebDriver driver){
+		PageFactory.initElements(driver, this);
+	
+		
+
+	}
+	
+	// Locators of Login Page
+	@FindBy(xpath = "//*[@id=\"nav-link-accountList\"]/span")
+	WebElement accountList;
+	
+	@FindBy(xpath = "//*[@id=\"nav-flyout-ya-signin\"]/a/span")
+	WebElement signIN;
+	
+
+	
+
+	
+	
+	
+	// Functionality of page
+	
+	public void login(String userName, String Password) {
+	
+		accountList.click();
+		
+		signIN.click();
+		
+	}
+
+}
